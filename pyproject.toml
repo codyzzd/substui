@@ -1,0 +1,59 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "substui"
+version = "0.1.0"
+description = "Navegador TUI para buscar e baixar legendas"
+readme = "README.md"
+requires-python = ">=3.10"
+license = "MIT"
+authors = [{ name = "codyzzd" }]
+keywords = ["subtitles", "tui", "opensubtitles", "subliminal", "terminal"]
+classifiers = [
+  "Development Status :: 3 - Alpha",
+  "Environment :: Console",
+  "License :: OSI Approved :: MIT License",
+  "Operating System :: OS Independent",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Programming Language :: Python :: 3.13",
+  "Topic :: Multimedia :: Video",
+]
+dependencies = [
+  "platformdirs>=4.0",
+  "subliminal>=2.3,<3",
+  "textual>=0.89,<8",
+]
+
+[project.optional-dependencies]
+dev = [
+  "build>=1.2",
+  "pytest>=8",
+  "ruff>=0.8",
+  "twine>=6",
+]
+
+[project.scripts]
+substui = "substui.app:main"
+
+[project.urls]
+Homepage = "https://github.com/codyzzd/substui"
+Repository = "https://github.com/codyzzd/substui.git"
+Issues = "https://github.com/codyzzd/substui/issues"
+Changelog = "https://github.com/codyzzd/substui/releases"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/substui"]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+testpaths = ["tests"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py310"
+
