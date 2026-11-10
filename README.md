@@ -16,14 +16,8 @@ com título parecido, ano errado ou outra fonte de vídeo.
 
 ## Comece com um comando
 
-Com o [`uv`](https://docs.astral.sh/uv/) instalado, execute o SubsTUI sem clonar nem instalar o
-projeto:
-
-```bash
-uvx --from git+https://github.com/codyzzd/substui.git substui
-```
-
-Depois da primeira publicação no PyPI, o comando fica ainda menor:
+Com o [`uv`](https://docs.astral.sh/uv/) instalado, execute a versão publicada no
+[PyPI](https://pypi.org/project/substui/) sem clonar nem instalar o projeto:
 
 ```bash
 uvx substui
@@ -61,13 +55,6 @@ powershell -ExecutionPolicy ByPass -c "irm https://astral.sh/uv/install.ps1 | ie
 ## Instalação permanente
 
 Para deixar o comando `substui` disponível de qualquer pasta:
-
-```bash
-uv tool install git+https://github.com/codyzzd/substui.git
-substui
-```
-
-Após a publicação no PyPI:
 
 ```bash
 uv tool install substui
